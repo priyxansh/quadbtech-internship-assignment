@@ -1,0 +1,154 @@
+.navbar {
+    padding: 18px 0 18px 32px;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navlogo {
+    color: var(--primary);
+    font-family: "Montserrat", sans-serif;
+}
+.navlogo span {
+    font-weight: 700;
+    font-size: 30px;
+}
+.navlist {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 16px;
+    padding: 47px 81px;
+    translate: -12px 12px;
+    gap: 1.2rem;
+    background-color: var(--secondary);
+
+    opacity: 0;
+    top: 50%;
+    right: -10px;
+    pointer-events: none;
+    transition: right 200ms ease, top 200ms ease-out, opacity 100ms;
+}
+#navtoggle-input:checked + .navlist {
+    opacity: 1;
+    pointer-events: all;
+    top: 100%;
+    right: 0;
+}
+.navlink {
+    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    transition: color 200ms;
+    position: relative;
+}
+.navlink:hover {
+    color: var(--primary);
+}
+.navlink.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    bottom: -3px;
+    width: 90%;
+    height: 1px;
+    background-color: var(--primary);
+}
+.navtoggler {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    order: 10;
+    cursor: pointer;
+}
+.navtoggler svg {
+    width: 24px;
+    height: 24px;
+}
+.searchbar {
+    left: 50%;
+    order: 1;
+    margin-left: auto;
+    margin-left: auto;
+}
+.input-control {
+    padding: 12px 28px;
+    border-radius: 8px;
+}
+#searchinput {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+#searchinput:focus-visible {
+    outline: transparent;
+}
+#navtoggle-input {
+    display: none;
+}
+
+.searchicon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.searchicon svg {
+    width: 24px;
+    height: 24px;
+}
+.input-control {
+    opacity: 0;
+    background-color: var(--secondary);
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 90%;
+    transition: opacity 150ms, top 200ms ease-out;
+}
+.input-control[data-mobile-expanded="true"] {
+    top: calc(100% + 10px);
+    opacity: 1;
+}
+#searchinput {
+    width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        padding: 18px 32px;
+    }
+    .navlist {
+        position: static;
+        opacity: 1;
+        flex-direction: row;
+        gap: 0.875rem;
+        margin-left: 32px;
+        padding: 0;
+        pointer-events: all;
+        translate: 0;
+    }
+    .searchbar {
+        margin: 0 0 0 auto;
+    }
+    .navtoggler {
+        display: none;
+    }
+    #searchinput {
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width: 620px) {
+    .input-control {
+        display: flex;
+        opacity: 1;
+        background: #223;
+        position: static;
+    }
+    .searchicon {
+        display: none;
+    }
+}
