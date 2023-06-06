@@ -51,19 +51,30 @@ const NavList = () => {
         { title: "Genres", link: "/" },
     ];
 
+    const [selected, setSelected] = useState("Home");
+
     return (
         <ul className="navlist">
             {navItems.map((item, index) => (
-                <NavItem title={item.title} link={item.link} key={index} />
+                <NavItem
+                    title={item.title}
+                    link={item.link}
+                    selected={selected}
+                    setSelected={setSelected}
+                    key={index}
+                />
             ))}
         </ul>
     );
 };
 
-const NavItem = ({ title, link }) => {
+const NavItem = ({ title, link, selected, setSelected }) => {
     return (
-        <li className="navitem">
-            <Link to={`${link}`} className="navlink">
+        <li className="navitem" onClick={() => setSelected(title)}>
+            <Link
+                to={`${link}`}
+                className={`navlink ${selected === title ? "active" : ""}`}
+            >
                 {title}
             </Link>
         </li>
