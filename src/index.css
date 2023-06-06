@@ -3,6 +3,7 @@
 :root {
     --primary: #df2e38;
     --secondary: #090e1c;
+    --neutral: #526D82;
 
     --bg-primary: #05070f;
 
@@ -65,6 +66,12 @@ button:hover {
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
+}
+main {
+    padding-inline: 3.5rem;
+}
+main > section {
+    margin-top: 3.5rem;
 }
 
 @media (prefers-color-scheme: light) {
