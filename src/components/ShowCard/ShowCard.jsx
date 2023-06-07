@@ -5,7 +5,7 @@ import "./ShowCard.css";
 export const ShowCard = (props) => {
     console.log(props);
     return (
-        <Link to={`/show/${props.show.id}`}>
+        <Link to={`/shows/${props.show.id}`}>
             <div className="showcard">
                 <button className="details-button">Details</button>
                 <img

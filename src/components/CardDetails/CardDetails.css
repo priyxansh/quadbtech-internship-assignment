@@ -1,0 +1,30 @@
+.show-details{
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.show-poster{
+    max-height: 700px;
+    object-fit: cover;
+
+}
+.card-details-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2.5rem 3rem;
+    font-size: 1.25rem;
+}
+.show-title{
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.flex-row{
+    gap: 2rem;
+}
+.synopsis{
+    margin-top: 2rem;
+}
