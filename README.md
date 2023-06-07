@@ -18,3 +18,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
+
+## Links
+[GitHub Repository](https://github.com/priyxansh/quadbtech-internship-assignment/)
+[Live Site](https://priyxansh-quadbtech-assignment.netlify.app/)
