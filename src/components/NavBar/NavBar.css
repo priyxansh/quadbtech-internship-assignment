@@ -29,6 +29,7 @@
     right: -10px;
     pointer-events: none;
     transition: right 200ms ease, top 200ms ease-out, opacity 100ms;
+    z-index: 100;
 }
 #navtoggle-input:checked + .navlist {
     opacity: 1;
