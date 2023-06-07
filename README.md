@@ -20,5 +20,5 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 ## Links
-[GitHub Repository](https://github.com/priyxansh/quadbtech-internship-assignment/)
+[GitHub Repository](https://github.com/priyxansh/quadbtech-internship-assignment/)\
 [Live Site](https://priyxansh-quadbtech-assignment.netlify.app/)
