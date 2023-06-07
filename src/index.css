@@ -56,12 +56,14 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--primary);
+    border-width: 3px;
+    
     cursor: pointer;
-    transition: border-color 0.25s;
+    transition: filter 250ms;
 }
 button:hover {
-    border-color: #646cff;
+    filter: brightness(85%);
 }
 button:focus,
 button:focus-visible {
